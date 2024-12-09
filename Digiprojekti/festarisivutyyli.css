@@ -1,0 +1,151 @@
+/* navin taustan väri */
+.navbar-custom {background-color: rgb(230, 214, 255);}
+
+/* navitekstin (brändin) väri */
+.navbar-custom a {color: rgb(13, 12, 12);}
+
+/* fontit */
+@font-face {
+    font-family: logofontti ;           /* oma nimi fontille */
+    src: url(FugazOne-Regular.ttf);}
+
+.navbar-custom a {font-family: logofontti ;}
+
+@font-face {
+    font-family: linkkifontti;
+    src: url(NotoSansMono_Condensed-Light.ttf);}
+
+.navbar-custom .nav-link {font-family: linkkifontti ;}
+h2 {font-family: linkkifontti ;}
+h3 {font-family: linkkifontti ;}
+h4 {font-family: linkkifontti ;}
+
+@font-face {
+    font-family: leipätekstifontti ;
+    src: url(HostGrotesk-Light.ttf);}
+
+p {font-family: leipätekstifontti ;}
+ul {font-family: leipätekstifontti ;}
+
+/* linkin väri */
+.navbar-custom .navbar-nav .nav-link {color: rgba(85, 78, 78, 0.8);}
+
+/* aktiivisen & hover-linkin väri */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {color: #5e0ac4;}
+
+
+/* hampurilaiskuvion väri, tässä musta */
+.custom-toggler .navbar-toggler-icon {background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");}
+
+/* hampparin reunuksen väri */
+.custom-toggler.navbar-toggler {
+border-color: rgba(0, 0, 0, 0.8);}
+
+
+
+/* kuvakaruselli leveys pienemmäksi, poista jos haluaa koko sivun leveydeksi */ 
+#demo {width:100%;
+    max-width:800px;
+    margin:auto;}
+
+/* teksti ei näy pienellä näytöllä */ 
+@media (max-width: 600px) 
+    {.carousel-caption 
+    {display: none ;}}
+    
+/* marginaali navipalkin ja kuvakarusellin väliin */ 
+    #demo  {margin-top:100px}
+
+/*sisällön yläreuna ei jää navipalkin taakse */ 
+ #esiintyjät {padding-top: 70px ;
+            padding-bottom: 70px ;}
+
+
+/* gridin kuvien määrittelyjä */
+#esiintyjät img {width: 100%;
+                max-width: 500px;
+        border-top-left-radius: 30%;
+        border-bottom-right-radius: 30%;}
+
+   
+/* jos haluaa pienelle näytölle pienemmät kuvat niin sitä voisi säätää jossain kohti */
+
+
+/*sisältöjen väliin jää tilaa */ 
+#esiintyjät  {margin-top:100px}
+
+/* haitarimallin kuvien koot */
+    #accordionFlushExample img {width: 100%;
+        max-width: 400px;
+        height: 50%;}
+
+
+/*sisältöjen väliin jää tilaa */ 
+   #yhteystiedot {padding-top: 70px ;}
+
+
+/* lomakkeen muotoa */
+
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */  
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+input[type=email] {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */  
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+input[type=tel] {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */  
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #b005fa;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=reset] {
+    background-color: #8f8991;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: rgb(58, 20, 250);
+}
+
+input[type=reset]:hover {
+    background-color: rgb(212, 211, 215);
+  }
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: rgb(230, 214, 255);
+  padding: 20px;
+}                  

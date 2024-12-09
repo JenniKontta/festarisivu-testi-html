@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title> Festarisivu </title>
+
+  <!-- linkki bootstrapin tyylitiedostoon, OLTAVA ENSIN, omat tyylitiedostot tämän jälkeen (css)-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">        <!-- min versio nopeampi ladata, ei välejä ym-->
+  
+  <!-- oma tyylitiedosto tähän!-->
+  <link href="festarisivutyyli.css" rel="stylesheet">
+
+  <!-- linkki bootstrapin javascript-kirjastoon-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+
+<main class="container-fluid">                                      <!-- sisältö reunasta reunaan kun fluid, ilman fluid sivuihin tulee marginaalit -->
+
+    <!-- NAVI-PALKKI-->
+    <nav class="navbar navbar-expand-sm navbar-custom fixed-top">     <!-- navbar-custom eli navin värit css-tiedostoon värit, fixed-top pitää palkin kiinni yläreunassa selatessa-->
+        <div class="container-fluid" id="alku">
+
+            <!-- logo -->
+            <a class="navbar-brand" href="#"> 
+                <img src="mikki-icon.png" alt="Logo" style="width:40px;"> </a>
+                <a class="navbar-brand" href="#alku"> Festariesiintyjät </a>
+            
+            <!-- tähän alle lisätään custom-toggler ennen navbar-toggleria-->
+            <button class="custom-toggler navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+    
+                <!-- linkkien nimet-->
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Etusivu</a>  
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="ilosaariesiintyjat.html">Ilosaarirock</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="provinssiesiintyjat.html">Provinssi</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="ruissiesiintyjat.html">Ruisrock</a>
+            </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#lomake">Ota yhteyttä</a>
+                </li>
+  
+            </ul>
+            </div>
+         
+        </div>
+    </nav>
+</main>  
+
+<!-- kuvakaruselli -->
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+    <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+  </div>
+  
+  <!-- The slideshow/carousel -->
+  <div class="carousel-inner">
+
+    <div class="carousel-item active">
+      <img src="1.kuva.jpg" alt="Keikkakuva" class="d-block" style="width:100%">
+      <div class="carousel-caption">
+        <h3>Festareiden esiintyjähistoria</h3>
+        <p>Ilosaarirockin, Provinssin ja Ruisrockin esiintyjät kautta aikojen</p>
+      </div>
+    </div>
+  </div>
+  
+<br>
+
+<!-- kortit -->
+<div class="container" id="esim">
+  <h2> Esimerkkejä esiintyjistä vuosien varrelta</h2>
+<div class="card-group">
+<div class="card" style="width: 400px">
+  <img class="card-img-top" src="paalava.jpg" alt="Päälava">
+  <div class="card-body">
+    <h4 class="card-title"> Lewis Capaldi </h4>
+    <p class="card-text"> Vuonna 2018 Ilosaarirockissa. </p>
+    <!-- <a href="#" class="btn btn-primary">See Profile</a> jos haluaisi linkin-->
+  </div>
+</div>
+
+  <div class="card" style="width: 400px">
+    <img class="card-img-top" src="sivulava.jpg" alt="Sivulava">
+    <div class="card-body">
+      <h4 class="card-title"> Charli XCX </h4>
+      <p class="card-text"> Vuonna 2015 Ilosaarirockissa ja Ruisrockissa 2017. </p>
+      <!-- <a href="#" class="btn btn-primary">See Profile</a> jos haluaisi linkin-->
+    </div>
+  </div>  
+
+    <div class="card" style="width: 400px">
+      <img class="card-img-top" src="sisalava.jpg" alt="Sisälava">
+      <div class="card-body">
+        <h4 class="card-title"> Oasis </h4>
+        <p class="card-text"> Vuonna 2000 Ruisrockissa. </p>
+        <!-- <a href="#" class="btn btn-primary">See Profile</a> jos haluaisi linkin-->
+      </div>
+      </div>
+
+      <div class="card" style="width: 400px">
+        <img class="card-img-top" src="minilava1.jpg" alt="Minilava">
+        <div class="card-body">
+          <h4 class="card-title"> 30 Seconds to Mars </h4>
+          <p class="card-text"> Vuonna 2010 Provinssissa. </p>
+          <!-- <a href="#" class="btn btn-primary">See Profile</a> jos haluaisi linkin-->
+        </div>
+</div>
+</div>
+</div>
+
+<br>
+
+
+<!-- palautelomake -->
+<div class="container">
+  <form onsubmit="return false" id="lomake">
+<h3> Anna palautetta </h3> <br> 
+
+    <label for="nimi">Nimi:</label>
+    <input type="text" id="nimi" required> <br>
+
+    <label for="email">Sähköposti:</label>
+    <input type="email" id="email" required> <br>
+
+    <label for="palaute">Palaute:</label>
+    <textarea id="palaute" name="palaute" style="height:200px"></textarea> <br>
+  </form>
+
+
+  <form action="/action_page.php">
+    <label for="vastaus"> Mitä toivoisit lisää sivustolle?</label> <br>
+
+    <input type="checkbox" id="vastaus1" name="vastaus" value="Tietoja artisteista">
+    <label for="vastaus1"> Tietoja artisteista </label><br>
+    <input type="checkbox" id="vastaus2" name="vastaus" value="Festarin historiaa">
+    <label for="vastaus2"> Festareiden historiaa </label><br>
+    <input type="checkbox" id="vastaus3" name="vastaus" value="Kuvia">
+    <label for="vastaus3"> Kuvia </label><br>
+    <input type="checkbox" id="vastaus4" name="vastaus" value="Musiikkia">
+    <label for="vastaus4"> Musiikkia </label><br>
+    <input type="checkbox" id="vastaus5" name="vastaus" value="Haastatteluja">
+    <label for="vastaus5"> Haastatteluja </label><br>
+  </form> <br> 
+  
+  <input type="submit" value="Lähetä" onclick="lähetettyPalaute()">
+  <input type="reset" value="Tyhjennä"> 
+
+</div>
+
+<!-- palautelomakkeen tiedot ja tulostus -->
+<div id="tiedot"></div>
+
+</div>
+
+<script> 
+function lähetettyPalaute() {
+
+  var nimitieto = document.getElementById("nimi").value;
+  var osoite = document.getElementById("email").value;
+  var puhelinnumero = document.getElementById("tel").value;
+  var Palautteesi = document.getElementById("palaute").value;
+  var muuttuja = "Valinta on: "; 
+  var radios = document.getElementsByName('age');
+  for (var i = 0, length = radios.length; i < length; i++) {
+    if (radios[i].checked) { 
+    muuttuja = muuttuja + radios[i].value;
+    break; 
+    } 
+  } 
+  var monivalinnat = "Valinnat ovat: ";
+  var boxit = document.getElementsByName('vastaus');
+  for (var i = 0, length = boxit.length; i < length; i++) {
+       if (boxit[i].checked) { 
+        monivalinnat = monivalinnat +" "+ boxit[i].value; 
+      } 
+  } 
+  var valinta = "Löysitkö etsimäsi?: "; 
+  var x = document.getElementById("valitse").selectedIndex;
+  var y = document.getElementById("valitse").options; 
+  valinta = valinta +  y[x].text; 
+
+  // tulostus
+  document.getElementById("tiedot").innerHTML="Hei " +nimitieto +"<br> Yhteystietosi: "+osoite + "<br> ja " +puhelinnumero +" <br> Palautteesi: " +Palautteesi + "<br>"+ muuttuja+ "<br>"+ monivalinnat + "<br>"+ valinta;
+  }
+    </script>
+
+
+</body>
+</html>
